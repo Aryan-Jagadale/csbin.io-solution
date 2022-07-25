@@ -179,9 +179,7 @@ function valueAndPrevIndex(array){
         indexName = "first";
       }
       return "" + array[index - 1] + " was found after index " + indexName;
-    }
-    
-        
+    }        
   }
 }
 
@@ -190,26 +188,17 @@ const returnedSentence = valueAndPrevIndex([4,5,6])
 console.log(returnedSentence.sentence());
 console.log(returnedSentence.sentence());*/
 
-
-//CHALLENGE 8
-//Just gave it try....
-/*function* createConversation(string) {
-  
-  return {
-    next: function() {
-      if(string === 'english'){
-        let result = setInterval(console.log('hi'),3000)
-         return result
-      }
-    	return 'giiberish'
-      
-      
+// CHALLENGE 8
+function* createConversation(string) {
+ 	yield setInterval(function() {
+    if(string === 'english') {
+      console.log('hello there')
+    }else {
+      console.log('gibbersih')
     }
-  }
+  },3000)
 }
-
-console.log(createConversation('english').next());*/
-
+console.log(createConversation('english').next());
 
 
 //CHALLENGE 9
